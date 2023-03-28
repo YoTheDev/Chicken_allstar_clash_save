@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0754fc372c48eb46ab214edb32bbb95, type: 3}
+  m_Name: Game manager
+  m_EditorClassIdentifier: 
+  playerClass:
+  - {fileID: 1354727619519666524, guid: 3b4b529930edc6c4c8cae5efcf4e4044, type: 3}
+  - {fileID: 2918346698355864921, guid: 71f082123d5b77944a2ad36149d72cd3, type: 3}
+  - {fileID: 746758828337159637, guid: c8652e005a42e2240a50e7104b04d316, type: 3}
+  - {fileID: 7067628304756306356, guid: 1c0097d4305651e4ba964a3b1e080861, type: 3}
+  playerAlive: 00000000
+  playerClassChoosen:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ControllerOrder: 00000000000000000000000000000000
+  _aliveIndex: 0
+  _classIndex: 0
+  Controll:
+  - 
+  - 
+  - 
+  - 
+  victory: 0
+  gameOver: 0

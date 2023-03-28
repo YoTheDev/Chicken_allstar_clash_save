@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f44dfff-cfa8-4b6d-83b6-b5ef4470d9c5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/PlayerDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/Player_management.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/DeathBallonAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/shockWaveScript.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player_management.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PatternSystem/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game_management.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PatternSystem/Dash.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PatternSystem/Stay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PatternSystem/Turn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/Game_management.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/Player_management.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vacation_resort_island/UI_title.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/WeaponData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/DeathBallonAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/DoubleSaber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/MetalFist.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/NitroBaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/WeaponSystem/StickOfTrue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/shockWaveScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Stay1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/Player_class.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Stay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Dash.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Jump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Prepare.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Turn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/PlayerDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chicken_all_stars_clash/PatternSystem/Enemy.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Fr8uG5fcfULAdsJM75q0vjzCr4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Desktop/Chicken_all_stars_clas_build_01\Chickens_all_stars_clash.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\y.spriet\Desktop\Chicken_all_stars_clas_build_01" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\y.spriet\Chicken_allstars_clash -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\y.spriet\Chicken_allstars_clash" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f44dfff-cfa8-4b6d-83b6-b5ef4470d9c5" name="Default Changelist" comment="" />
+      <created>1665239067702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665239067702</updated>
+      <workItem from="1665239080559" duration="16402000" />
+      <workItem from="1666211986939" duration="379000" />
+      <workItem from="1666212546417" duration="7008000" />
+      <workItem from="1667081654894" duration="6280000" />
+      <workItem from="1667344453570" duration="1007000" />
+      <workItem from="1667414215212" duration="782000" />
+      <workItem from="1667813961947" duration="87000" />
+      <workItem from="1667814062802" duration="10739000" />
+      <workItem from="1667896604994" duration="9143000" />
+      <workItem from="1667982708501" duration="20249000" />
+      <workItem from="1668069777256" duration="19800000" />
+      <workItem from="1668501764146" duration="18818000" />
+      <workItem from="1668588825121" duration="14542000" />
+      <workItem from="1668674044089" duration="21281000" />
+      <workItem from="1669020686620" duration="14516000" />
+      <workItem from="1669106221523" duration="23820000" />
+      <workItem from="1669192614320" duration="24207000" />
+      <workItem from="1669278464356" duration="20658000" />
+      <workItem from="1669365279656" duration="23201000" />
+      <workItem from="1669624738924" duration="25266000" />
+      <workItem from="1669712028062" duration="19813000" />
+      <workItem from="1669798622925" duration="20127000" />
+      <workItem from="1669883989175" duration="19606000" />
+      <workItem from="1669938852713" duration="384000" />
+      <workItem from="1670009282372" duration="7345000" />
+      <workItem from="1670076935473" duration="1466000" />
+      <workItem from="1670095583760" duration="8973000" />
+      <workItem from="1670155924528" duration="31174000" />
+      <workItem from="1670229953219" duration="11173000" />
+      <workItem from="1670259334472" duration="6471000" />
+      <workItem from="1670272177411" duration="11874000" />
+      <workItem from="1670316677563" duration="7725000" />
+      <workItem from="1670835692294" duration="1188000" />
+      <workItem from="1670857159456" duration="2163000" />
+      <workItem from="1670921327622" duration="19138000" />
+      <workItem from="1671010480624" duration="14685000" />
+      <workItem from="1671093401517" duration="11358000" />
+      <workItem from="1671184353989" duration="7725000" />
+      <workItem from="1671364004673" duration="15460000" />
+      <workItem from="1673342444180" duration="12252000" />
+      <workItem from="1673429037505" duration="11310000" />
+      <workItem from="1677505735010" duration="3915000" />
+      <workItem from="1677581196239" duration="5256000" />
+      <workItem from="1677662630463" duration="11783000" />
+      <workItem from="1677756786050" duration="7438000" />
+      <workItem from="1677838893233" duration="6639000" />
+      <workItem from="1678095467150" duration="18662000" />
+      <workItem from="1678178833162" duration="21319000" />
+      <workItem from="1678266483664" duration="15489000" />
+      <workItem from="1678350102927" duration="10441000" />
+      <workItem from="1678436760800" duration="14570000" />
+      <workItem from="1678783504545" duration="16498000" />
+      <workItem from="1679301780972" duration="19254000" />
+      <workItem from="1679476038463" duration="13623000" />
+      <workItem from="1679565191767" duration="13829000" />
+      <workItem from="1679649179114" duration="13042000" />
+      <workItem from="1679751025804" duration="16461000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

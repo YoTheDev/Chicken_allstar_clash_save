@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\titou\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\titou\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Chicken_allstars_clash.-152663248.00" t="ExcludeRecursive" />
+    <e p="D:\Chicken_allstars_clash" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Ciconia Studio" t="Include">
+          <e p="_Shared Files" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Demo" t="Include">
+                <e p="FreeCam.cs" t="Include" />
+                <e p="FreeCamera.cs" t="Include" />
+                <e p="SuperCamera.cs" t="Include" />
+                <e p="UIButton_ShowNext.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="Standard Shaders" t="Include">
+              <e p="BuiltIn" t="Include">
+                <e p="CS_Lite Standard (Specular setup) Cutout.shader" t="Include" />
+                <e p="CS_Lite Standard (Specular setup) Opaque.shader" t="Include" />
+                <e p="CS_Lite Standard (Specular setup) Transparent.shader" t="Include" />
+                <e p="CS_Standard (Specular setup) Cutout.shader" t="Include" />
+                <e p="CS_Standard (Specular setup) Opaque.shader" t="Include" />
+                <e p="CS_Standard (Specular setup) Transparent.shader" t="Include" />
+              </e>
+              <e p="Readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Controller.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Chicken_all_stars_clash" t="Include">
+            <e p="Camera_manager.cs" t="Include" />
+            <e p="Game_management.cs" t="Include" />
+            <e p="PatternSystem" t="Include">
+              <e p="Dash.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
+              <e p="Jump.cs" t="Include" />
+              <e p="PatternAction.cs" t="Include" />
+              <e p="PlayerDetector.cs" t="Include" />
+              <e p="Prepare.cs" t="Include" />
+              <e p="Stay.cs" t="Include" />
+              <e p="Turn.cs" t="Include" />
+            </e>
+            <e p="Player_class.cs" t="Include" />
+            <e p="Player_management.cs" t="Include" />
+            <e p="projectile.cs" t="Include" />
+            <e p="shockWaveScript.cs" t="Include" />
+            <e p="WeaponSystem" t="Include">
+              <e p="DeathBallonAttack.cs" t="Include" />
+              <e p="DoubleSaber.cs" t="Include" />
+              <e p="MetalFist.cs" t="Include" />
+              <e p="NitroBaker.cs" t="Include" />
+              <e p="StickOfTrue.cs" t="Include" />
+              <e p="WeaponData.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Vacation_resort_island" t="Include">
+            <e p="Player_select.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="UI.cs" t="Include" />
+              <e p="UI_manager.cs" t="Include" />
+            </e>
+            <e p="UI_title.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Chicken_allstars_clash.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
