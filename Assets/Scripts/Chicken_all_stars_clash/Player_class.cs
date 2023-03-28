@@ -371,7 +371,6 @@ public class Player_class : MonoBehaviour {
         if (!player_management.pauseUI.activeSelf && player_management.ActivateInput && (!Game_management.gameOver || !Game_management.victory)) {
             player_management.pauseUI.SetActive(true);
             player_management.PauseResumeButton.Select();
-            _boss.GetComponent<Enemy>().ShakeTimer = 1;
             Time.timeScale = 0;
         }
     }
