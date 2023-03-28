@@ -11,8 +11,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class Player_management : MonoBehaviour
-{
+public class Player_management : MonoBehaviour {
     public Game_management GameManagement;
     public Enemy enemy;
     public List<Transform> playerSpawnerArena;
@@ -23,10 +22,12 @@ public class Player_management : MonoBehaviour
     public GameObject go;
     public GameObject victoryUI;
     public GameObject defeatUI;
+    public GameObject pauseUI;
     public Button retryButton;
     public Button backButton;
     public Button defeatRetryButton;
     public Button defeatBackButton;
+    public Button PauseResumeButton;
     public List<Player_class> playerClass;
     public TextMeshProUGUI score;
     public int timeBonus;
@@ -46,10 +47,7 @@ public class Player_management : MonoBehaviour
         backButton.onClick.AddListener(() => BackToTitle());
         defeatRetryButton.onClick.AddListener(() => Retry());
         defeatBackButton.onClick.AddListener(() => BackToTitle());
-        victoryUI.SetActive(false);
-        defeatUI.SetActive(false);
-        ready.SetActive(true);
-        go.SetActive(false);
+        PauseResumeButton.onClick.AddListener(() => ResumeGame());
         for (int i = 0; i < life.Count; i++) {
             life[i].SetActive(false);
         }
@@ -137,11 +135,19 @@ public class Player_management : MonoBehaviour
     public void Retry() {
         Scene thisScene = SceneManager.GetActiveScene();
         GameManagement.ResetPlayerAlive();
+        Time.timeScale = 1;
         SceneManager.LoadScene(thisScene.name);
     }
 
     public void BackToTitle() {
         SceneManager.LoadScene("Island_outside");
+        Time.timeScale = 1;
         GameManagement.OnEnable();
+    }
+
+    public void ResumeGame()
+    {
+        pauseUI.SetActive(false);
+        Time.timeScale = 1;
     }
 }

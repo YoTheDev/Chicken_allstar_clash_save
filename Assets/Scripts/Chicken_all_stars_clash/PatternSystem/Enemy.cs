@@ -57,9 +57,9 @@ namespace PatternSystem {
         private float _currentHealth;
         private float _patternTimer;
         private float fixedDeltaTime;
-        private float ShakeTimer = 1;
+        public float ShakeTimer = 1;
         private bool _isDead;
-        private bool _enemyReady;
+        public bool _enemyReady;
         private Quaternion _rotGoal;
         private Vector3 _direction;
         private Vector3 startPos;

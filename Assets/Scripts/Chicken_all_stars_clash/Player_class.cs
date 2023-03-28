@@ -182,7 +182,7 @@ public class Player_class : MonoBehaviour {
     void BalloonCollisionActive() { deathBalloon.layer = LayerMask.NameToLayer("Default"); }
 
     public void OnMove(InputValue Moving) {
-        if (!player_management.ActivateInput) return;
+        if (!player_management.ActivateInput || player_management.pauseUI.activeSelf) return;
         var rotation = transform.rotation;
         _axisX = Moving.Get<float>();
         if (_axisX < 0) {
@@ -200,7 +200,7 @@ public class Player_class : MonoBehaviour {
     }
 
     public void OnJump() {
-        if (!player_management.ActivateInput || Game_management.victory || isDead || block) return;
+        if (!player_management.ActivateInput || Game_management.victory || isDead || block || player_management.pauseUI.activeSelf) return;
         if (isNearGrounded && !_attack) {
             animator.SetBool("jump",true);
             animator.SetBool("grounded",false);
@@ -226,7 +226,7 @@ public class Player_class : MonoBehaviour {
     }
 
     void OnBlock() {
-        if (!player_management.ActivateInput || block || isDead) return;
+        if (!player_management.ActivateInput || block || isDead || player_management.pauseUI.activeSelf) return;
         block = true;
         _currentWeapon.DoBlock(this);
         _currentWeapon.Interrupt(this);
@@ -234,7 +234,7 @@ public class Player_class : MonoBehaviour {
     }
 
     void OnUnBlock() {
-        if (!player_management.ActivateInput || isDead) return;
+        if (!player_management.ActivateInput || isDead || player_management.pauseUI.activeSelf) return;
         playerSpeed = _saveSpeed;
         block = false;
         _currentWeapon.DoUnBlock(this);
@@ -266,7 +266,7 @@ public class Player_class : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (isDead) return;
-        if (other.gameObject.CompareTag("AttackBoss")) {
+        if (other.gameObject.CompareTag("AttackBoss") && !block) {
             _bossAttack = other.gameObject;
             _TouchBossAttack = true;
             CollisionBoss();
@@ -317,7 +317,7 @@ public class Player_class : MonoBehaviour {
     }
 
     public void OnAttack() {
-        if (_attack || !player_management.ActivateInput || block) return;
+        if (_attack || !player_management.ActivateInput || block || player_management.pauseUI.activeSelf) return;
         if (isNearGrounded && !_attack && !_airAttack) {
             animator.SetBool("attack",true);
             attackBoxCollider = attackBox.GetComponent<Collider>();
@@ -363,6 +363,16 @@ public class Player_class : MonoBehaviour {
         if(_airAttack) {
             _airAttack = false;
             attack2Box.SetActive(false);
+        }
+    }
+
+    void OnStart()
+    {
+        if (!player_management.pauseUI.activeSelf && player_management.ActivateInput && (!Game_management.gameOver || !Game_management.victory)) {
+            player_management.pauseUI.SetActive(true);
+            player_management.PauseResumeButton.Select();
+            _boss.GetComponent<Enemy>().ShakeTimer = 1;
+            Time.timeScale = 0;
         }
     }
 }

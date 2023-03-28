@@ -11,11 +11,13 @@ public class PlayerDetector : MonoBehaviour
     private bool ForcedTurn;
 
     private void OnTriggerEnter(Collider other) {
+        if (enemy.target.Count <= 0) return;
         collideCount++;
         if (other.gameObject == enemy.target[enemy._rngPlayer]) ForcedTurn = false;
     }
 
     private void OnTriggerExit(Collider other) {
+        if (enemy.target.Count <= 0) return;
         collideCount--;
         if (collideCount <= 0 || other.gameObject == enemy.target[enemy._rngPlayer]) ForcedTurn = true;
     }

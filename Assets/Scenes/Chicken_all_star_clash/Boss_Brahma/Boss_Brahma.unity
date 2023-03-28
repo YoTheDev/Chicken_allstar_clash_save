@@ -1451,7 +1451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &203227716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5468,10 +5468,12 @@ MonoBehaviour:
   go: {fileID: 1758302616}
   victoryUI: {fileID: 105633935}
   defeatUI: {fileID: 1801950561}
+  pauseUI: {fileID: 203227715}
   retryButton: {fileID: 818149613}
   backButton: {fileID: 1368457191}
   defeatRetryButton: {fileID: 1925450158}
   defeatBackButton: {fileID: 1297403915}
+  PauseResumeButton: {fileID: 1858324610}
   playerClass:
   - {fileID: 0}
   - {fileID: 0}
@@ -7340,7 +7342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1758302617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,7 +7943,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1269513676}
         m_TargetAssemblyTypeName: Player_management, Assembly-CSharp
-        m_MethodName: BackToTitle
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
