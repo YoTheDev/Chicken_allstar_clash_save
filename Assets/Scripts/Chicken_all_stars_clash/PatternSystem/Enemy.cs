@@ -207,6 +207,7 @@ namespace PatternSystem {
                 else Health_text.text = "???";
             }
             if (_currentHealth <= 0) {
+                animator.SetBool("Dead",true);
                 Instantiate(deathFeedback,transform.position,transform.rotation);
                 _isDead = true;
                 player = other.gameObject;

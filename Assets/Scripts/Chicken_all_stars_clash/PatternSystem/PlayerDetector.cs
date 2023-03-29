@@ -23,7 +23,8 @@ public class PlayerDetector : MonoBehaviour
     }
 
     private void Update() {
-        if(!ForcedTurn && enemy._afterAction != 2) return;
+        if(!ForcedTurn) return;
+        if (enemy._afterAction != 0) return;
         enemy._afterAction = 3;
         ForcedTurn = false;
     }

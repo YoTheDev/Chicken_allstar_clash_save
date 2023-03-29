@@ -368,7 +368,7 @@ public class Player_class : MonoBehaviour {
 
     void OnStart()
     {
-        if (!player_management.pauseUI.activeSelf && player_management.ActivateInput && (!Game_management.gameOver || !Game_management.victory)) {
+        if (!player_management.pauseUI.activeSelf && player_management.ActivateInput && !Game_management.gameOver && !Game_management.victory) {
             player_management.pauseUI.SetActive(true);
             player_management.PauseResumeButton.Select();
             Time.timeScale = 0;

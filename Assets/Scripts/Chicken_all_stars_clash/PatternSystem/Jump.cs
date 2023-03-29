@@ -31,7 +31,7 @@ public class Jump : PatternAction
 
     public override void isCollidedWall(Enemy enemy)
     {
-        throw new System.NotImplementedException();
+        return;
     }
 
     public override void isCollidedGround(Enemy enemy)
