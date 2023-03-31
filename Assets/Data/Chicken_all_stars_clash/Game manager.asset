@@ -17,17 +17,17 @@ MonoBehaviour:
   - {fileID: 2918346698355864921, guid: 71f082123d5b77944a2ad36149d72cd3, type: 3}
   - {fileID: 746758828337159637, guid: c8652e005a42e2240a50e7104b04d316, type: 3}
   - {fileID: 7067628304756306356, guid: 1c0097d4305651e4ba964a3b1e080861, type: 3}
-  playerAlive: 00000000
+  playerAlive: 01000000
   playerClassChoosen:
+  - {fileID: 1354727619519666524, guid: 3b4b529930edc6c4c8cae5efcf4e4044, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  ControllerOrder: 00000000000000000000000000000000
+  ControllerOrder: 58000000000000000000000000000000
   _aliveIndex: 0
   _classIndex: 0
   Controll:
-  - 
+  - Xbox Controller
   - 
   - 
   - 

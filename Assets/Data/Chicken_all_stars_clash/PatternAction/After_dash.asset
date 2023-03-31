@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a191b038994a2a8ee9131abd70eab2, type: 3}
   m_Name: After_dash
   m_EditorClassIdentifier: 
-  Duration: 0.5
+  Duration: 1
