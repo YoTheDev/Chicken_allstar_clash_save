@@ -384,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8131613019704382001}
   m_LocalRotation: {x: 0, y: 0.25586754, z: 0, w: 0.9667119}
-  m_LocalPosition: {x: 107.11162, y: 0.42210388, z: -53.021065}
+  m_LocalPosition: {x: 344.0839, y: 0.91015625, z: -171.78674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1469212806635958838}
@@ -661,11 +661,11 @@ PrefabInstance:
     - target: {fileID: -2562436172148172106, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: aec2e0ac18038c9409a92a5a47df4f86, type: 2}
+      objectReference: {fileID: 2100000, guid: 62005cd2c9253174a8280f9719342585, type: 2}
     - target: {fileID: -2562436172148172106, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 1f189e6b5da317d49808218174d5df3f, type: 2}
+      objectReference: {fileID: 2100000, guid: 8d1510d1dcc174940b3e6ee901098344, type: 2}
     - target: {fileID: 919132149155446097, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
       propertyPath: m_Name
       value: Pirate
