@@ -7,25 +7,31 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "new Game manager",menuName = "ChickenAllStarsClash/InGame/Game_manager")]
-public class Game_management : ScriptableObject
-{
+public class Game_management : ScriptableObject {
     [SerializeField] private List<GameObject> playerClass;
-    
+
+    public List<ColorList> ListOfColorMaterial;
+    public List<ChoosenColorList> ListOfColorChoosen;
     public List<bool> playerAlive;
     public List<GameObject> playerClassChoosen;
     public List<int> ControllerOrder;
     public int _aliveIndex;
     public int _classIndex;
+    public int colorIndex;
     public List<string> Controll;
     public bool victory;
     public bool gameOver;
 
     public void PlayerCount() {
         playerClassChoosen[_aliveIndex] = playerClass[_classIndex];
+        ListOfColorChoosen[_aliveIndex].MaterialOne = ListOfColorMaterial[colorIndex].MaterialOne;
+        ListOfColorChoosen[_aliveIndex].MaterialTwo = ListOfColorMaterial[colorIndex].MaterialTwo;
     }
     
     public void PlayerLeft() {
         playerClassChoosen[_aliveIndex] = null;
+        ListOfColorChoosen[_aliveIndex].MaterialOne = null;
+        ListOfColorChoosen[_aliveIndex].MaterialTwo = null;
     }
     
     public void PlayerDead() {
@@ -52,6 +58,11 @@ public class Game_management : ScriptableObject
         for (int i = 0; i < Controll.Count; i++) {
             Controll[i] = null;
         }
+        for (int i = 0; i < ListOfColorChoosen.Count; i++)
+        {
+            ListOfColorChoosen[i].MaterialOne = null;
+            ListOfColorChoosen[i].MaterialTwo = null;
+        }
     }
 
     public void ResetPlayerAlive() {
@@ -59,4 +70,16 @@ public class Game_management : ScriptableObject
             playerAlive[i] = false;
         }
     }
+}
+
+[Serializable]
+public class ColorList {
+    public Material MaterialOne;
+    public Material MaterialTwo;
+}
+
+[Serializable]
+public class ChoosenColorList {
+    public Material MaterialOne;
+    public Material MaterialTwo;
 }

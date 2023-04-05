@@ -32,7 +32,7 @@ public class UI_title : MonoBehaviour {
     private bool _jumpPressed;
     private bool _playOneShot;
     private bool _playerReadyBool;
-    private int _playerIndex = 0;
+    private int _playerIndex;
     private PlayerInputManager _inputManager;
     private PlayerInput _playerInput;
 

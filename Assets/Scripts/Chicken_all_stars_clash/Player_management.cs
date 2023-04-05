@@ -61,6 +61,9 @@ public class Player_management : MonoBehaviour {
             thisPlayer.transform.position = playerSpawnerArena[i].transform.position;
             life[i].SetActive(true);
             countPlayer++;
+            Material[] RoosterBase = thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials;
+            RoosterBase[0] = GameManagement.ListOfColorChoosen[i].MaterialTwo;
+            RoosterBase[1] = GameManagement.ListOfColorChoosen[i].MaterialOne;
         }
         switch (countPlayer) {
             case 1:
