@@ -46,6 +46,7 @@ public class Game_management : ScriptableObject {
     public void Victory() { victory = true; }
 
     public void OnEnable() {
+        colorIndex = 0;
         for (int i = 0; i < playerClassChoosen.Count; i++) {
             playerClassChoosen[i] = null;
         }

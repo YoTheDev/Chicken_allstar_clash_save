@@ -34,7 +34,8 @@ public class Player_management : MonoBehaviour {
     
     [HideInInspector] public bool ActivateInput;
     [HideInInspector] public float scoreEarned;
-    
+
+    private Material[] RoosterBase;
     private float time;
     private int secondUpdate = 1;
     private int countPlayer;
@@ -61,9 +62,9 @@ public class Player_management : MonoBehaviour {
             thisPlayer.transform.position = playerSpawnerArena[i].transform.position;
             life[i].SetActive(true);
             countPlayer++;
-            Material[] RoosterBase = thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials;
-            RoosterBase[0] = GameManagement.ListOfColorChoosen[i].MaterialTwo;
-            RoosterBase[1] = GameManagement.ListOfColorChoosen[i].MaterialOne;
+            RoosterBase = thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials;
+            RoosterBase[0] = GameManagement.ListOfColorChoosen[1].MaterialTwo;
+                RoosterBase[1] = GameManagement.ListOfColorChoosen[1].MaterialOne;
         }
         switch (countPlayer) {
             case 1:
