@@ -42,7 +42,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   ControllerOrder: 00000000000000000000000000000000
-  _aliveIndex: 0
+  _aliveIndex: 1
   _classIndex: 0
   colorIndex: 0
   Controll:

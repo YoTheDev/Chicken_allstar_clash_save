@@ -34,11 +34,9 @@ public class Player_management : MonoBehaviour {
     
     [HideInInspector] public bool ActivateInput;
     [HideInInspector] public float scoreEarned;
-
-    private Material[] RoosterBase;
+    
     private float time;
     private int secondUpdate = 1;
-    private int countPlayer;
     private bool playOneShot;
 
     private void Start() {
@@ -57,16 +55,17 @@ public class Player_management : MonoBehaviour {
             string controller = GameManagement.Controll[i];
             if(thisPlayer == null) continue;
             playerClass[i] = thisPlayer.GetComponent<Player_class>();
+            thisPlayer.name = "Player_" + i;
             inputManager.playerPrefab = thisPlayer;
             inputManager.JoinPlayer(i,i,controller);
+            thisPlayer = GameObject.Find("Player_" + i + "(Clone)");
             thisPlayer.transform.position = playerSpawnerArena[i].transform.position;
             life[i].SetActive(true);
-            countPlayer++;
-            RoosterBase = thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMaterials;
-            RoosterBase[0] = GameManagement.ListOfColorChoosen[1].MaterialTwo;
-                RoosterBase[1] = GameManagement.ListOfColorChoosen[1].MaterialOne;
+            Material[] RoosterBase =
+                { GameManagement.ListOfColorChoosen[i].MaterialTwo, GameManagement.ListOfColorChoosen[i].MaterialOne };
+            thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().materials = RoosterBase;
         }
-        switch (countPlayer) {
+        switch (GameManagement.countPlayer) {
             case 1:
                 enemy.maxHealth = 15000;
                 break;
@@ -85,7 +84,7 @@ public class Player_management : MonoBehaviour {
     void Update() {
         if (GameManagement.victory && !playOneShot) {
             victoryUI.SetActive(true);
-            switch (countPlayer) {
+            switch (GameManagement.countPlayer) {
                 case 1:
                     scoreEarned += 500;
                     break;

@@ -46,26 +46,26 @@ public class Player_select : MonoBehaviour
         crochet.SetActive(false);
     }
 
-    void OnMove(InputValue Moving) {
-        xAxis = Moving.Get<float>();
-        if (validate) return;
-        if (xAxis <= -1) {
-            _class[uiIndex].SetActive(false);
-            _classObject[uiIndex].SetActive(false);
-            if (uiIndex <= 0) uiIndex = 3;
-            else uiIndex--;
-            _class[uiIndex].SetActive(true);
-            _classObject[uiIndex].SetActive(true);
-        }
-        if (xAxis >= 1) {
-            _class[uiIndex].SetActive(false);
-            _classObject[uiIndex].SetActive(false);
-            if (uiIndex >= _class.Count-1) uiIndex = 0;
-            else uiIndex++;
-            _class[uiIndex].SetActive(true);
-            _classObject[uiIndex].SetActive(true);
-        }
-    }
+    //void OnMove(InputValue Moving) {
+        //xAxis = Moving.Get<float>();
+        //if (validate) return;
+        //if (xAxis <= -1) {
+            //_class[uiIndex].SetActive(false);
+            //_classObject[uiIndex].SetActive(false);
+            //if (uiIndex <= 0) uiIndex = 3;
+            //else uiIndex--;
+            //_class[uiIndex].SetActive(true);
+            //_classObject[uiIndex].SetActive(true);
+        //}
+        //if (xAxis >= 1) {
+            //_class[uiIndex].SetActive(false);
+            //_classObject[uiIndex].SetActive(false);
+            //if (uiIndex >= _class.Count-1) uiIndex = 0;
+            //else uiIndex++;
+            //_class[uiIndex].SetActive(true);
+            //_classObject[uiIndex].SetActive(true);
+        //}
+    //}
 
     void OnJump() {
         if (validate) return;

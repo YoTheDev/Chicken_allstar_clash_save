@@ -21,17 +21,20 @@ public class Game_management : ScriptableObject {
     public List<string> Controll;
     public bool victory;
     public bool gameOver;
+    public int countPlayer;
 
     public void PlayerCount() {
         playerClassChoosen[_aliveIndex] = playerClass[_classIndex];
         ListOfColorChoosen[_aliveIndex].MaterialOne = ListOfColorMaterial[colorIndex].MaterialOne;
         ListOfColorChoosen[_aliveIndex].MaterialTwo = ListOfColorMaterial[colorIndex].MaterialTwo;
+        countPlayer++;
     }
     
     public void PlayerLeft() {
         playerClassChoosen[_aliveIndex] = null;
         ListOfColorChoosen[_aliveIndex].MaterialOne = null;
         ListOfColorChoosen[_aliveIndex].MaterialTwo = null;
+        countPlayer--;
     }
     
     public void PlayerDead() {
@@ -59,6 +62,7 @@ public class Game_management : ScriptableObject {
         for (int i = 0; i < Controll.Count; i++) {
             Controll[i] = null;
         }
+        countPlayer = 0;
         for (int i = 0; i < ListOfColorChoosen.Count; i++)
         {
             ListOfColorChoosen[i].MaterialOne = null;

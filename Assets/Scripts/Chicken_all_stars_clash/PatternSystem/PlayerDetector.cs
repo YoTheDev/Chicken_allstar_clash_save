@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using PatternSystem;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerDetector : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerDetector : MonoBehaviour
     private int collideCount;
     private bool ForcedTurn;
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         if (enemy.target.Count <= 0) return;
         collideCount++;
         if (other.gameObject == enemy.target[enemy._rngPlayer]) ForcedTurn = false;
@@ -23,9 +24,10 @@ public class PlayerDetector : MonoBehaviour
     }
 
     private void Update() {
-        if(!ForcedTurn) return;
         if (enemy._afterAction != 0) return;
-        enemy._afterAction = 3;
-        ForcedTurn = false;
+        if (ForcedTurn) {
+            enemy._afterAction = 3;
+            ForcedTurn = false;
+        }
     }
 }

@@ -152,8 +152,6 @@ namespace PatternSystem {
                 if (Turn) {
                     transform.rotation = Quaternion.LookRotation(_direction);
                 }
-                int randomNumber = Random.Range(0, target.Count);
-                _rngPlayer = _RandomTarget[randomNumber];
                 Rigidbody.velocity = Vector3.zero;
                 Turn = false;
                 camera_script.shakeStart = true;
@@ -237,8 +235,10 @@ namespace PatternSystem {
         private PatternAction GetRandomPatternAction() {
             switch (_afterAction) {
                 case 0:
-                    int randomNumber = Random.Range(0, _PatternIndex.Length);
-                    _currentPatternIndex = _PatternIndex[randomNumber];
+                    int randomNumber01 = Random.Range(0, target.Count);
+                    _rngPlayer = _RandomTarget[randomNumber01];
+                    int randomNumber02 = Random.Range(0, _PatternIndex.Length);
+                    _currentPatternIndex = _PatternIndex[randomNumber02];
                     _afterAction++;
                     break;
                 case 1:

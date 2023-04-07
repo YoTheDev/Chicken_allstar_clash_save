@@ -257,7 +257,6 @@ public class Player_class : MonoBehaviour {
             }
         }
         if (other.gameObject.CompareTag("Boss")) {
-            if (isDead) return;
             _TouchBossAttack = false;
             CollisionBoss();
         }
@@ -274,6 +273,10 @@ public class Player_class : MonoBehaviour {
     }
 
     void CollisionBoss() {
+        gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
+        deathBalloon.layer = LayerMask.NameToLayer("IgnoreCollision");
+        Invoke(nameof(InvulnerabilityEnd), 1);
+        if(isDead) return;
         animator.SetBool("damage",true);
         _rigidbody.velocity = new Vector3(0, 0, 0);
         if(_TouchBossAttack) {
@@ -286,8 +289,6 @@ public class Player_class : MonoBehaviour {
         }
         _rigidbody.AddForce(knockbackDirection * knockbackForce,ForceMode.Impulse);
         _rigidbody.AddForce(Vector3.up * knockbackForceUp,ForceMode.Impulse);
-        gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
-        Invoke(nameof(InvulnerabilityEnd), 1);
         AttackCooldown();
         Damage();
     }
@@ -307,6 +308,7 @@ public class Player_class : MonoBehaviour {
     void InvulnerabilityEnd() {
         if(block) return;
         gameObject.layer = LayerMask.NameToLayer("Player_one");
+        deathBalloon.layer = LayerMask.NameToLayer("Default");
     }
 
     void ShieldBroke() {
