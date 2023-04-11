@@ -39,6 +39,7 @@ public class Player_class : MonoBehaviour {
     private Slider _slider01;
     private Slider _slider02;
     private Vector3 knockbackDirection;
+    private Vector3 ShieldScale;
 
     [HideInInspector] public WeaponData _currentWeapon;
     [HideInInspector] public bool _canAirAttack;
@@ -74,6 +75,7 @@ public class Player_class : MonoBehaviour {
     public List<string> playerLifeUIstring;
 
     void Start() {
+        ShieldScale = Shield.transform.localScale;
         _saveAxisXpositive = true;
         _camera = GameObject.Find("Main Camera");
         camera_script = _camera.GetComponent<Camera_manager>();
@@ -113,22 +115,29 @@ public class Player_class : MonoBehaviour {
         }
         if (block) {
             _shieldTimer += shieldRemain;
+            Shield.transform.localScale += new Vector3(0.1f, .1f, .1f) * (-7f * Time.deltaTime);
             Debug.Log(_shieldTimer);
             if (_shieldTimer >= 100) {
+                Shield.transform.localScale = ShieldScale;
+                block = false;
                 _shieldTimer = 0;
                 Shield.SetActive(false);
-                player_management.ActivateInput = false;
                 gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
                 animator.SetInteger("speed",0);
                 playerSpeed = 0;
                 _slider01.value -= 15;
+                player_management.ActivateInput = false;
                 Invoke(nameof(ShieldBroke),5);
             }
         }
         else {
             if (_shieldTimer > 0) {
+                Shield.transform.localScale += new Vector3(0.1f, .1f, .1f) * (2.34f * Time.deltaTime);
                 _shieldTimer -= shieldRecharge;
                 Debug.Log(_shieldTimer);
+                if (_shieldTimer <= 0) {
+                    Shield.transform.localScale = ShieldScale;
+                }
             }
         }
         if (!isNearGrounded && !isDead) {
@@ -312,7 +321,6 @@ public class Player_class : MonoBehaviour {
     }
 
     void ShieldBroke() {
-        block = false;
         player_management.ActivateInput = true;
         playerSpeed = _saveSpeed;
         gameObject.layer = LayerMask.NameToLayer("Player_one");
