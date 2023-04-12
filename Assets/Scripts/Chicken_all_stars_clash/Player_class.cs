@@ -40,6 +40,7 @@ public class Player_class : MonoBehaviour {
     private Slider _slider02;
     private Vector3 knockbackDirection;
     private Vector3 ShieldScale;
+    private ParticleSystem.MainModule smokeParticle;
 
     [HideInInspector] public WeaponData _currentWeapon;
     [HideInInspector] public bool _canAirAttack;
@@ -59,7 +60,7 @@ public class Player_class : MonoBehaviour {
     [HideInInspector] public bool block;
     [HideInInspector] public Rigidbody _rigidbody;
     [HideInInspector] public Collider attackBoxCollider;
-    
+
     public float playerSpeed;
     public float propulsion;
     public float shieldRemain;
@@ -69,12 +70,14 @@ public class Player_class : MonoBehaviour {
     public GameObject Shield;
     public GameObject projectile;
     public GameObject deathBalloon;
+    public GameObject explosionSmoke;
     public List<WeaponData> weapon;
     public Game_management Game_management;
     public TextMeshPro PlayerIndicator;
     public List<string> playerLifeUIstring;
 
     void Start() {
+        smokeParticle = GetComponentInChildren<ParticleSystem>().main;
         ShieldScale = Shield.transform.localScale;
         _saveAxisXpositive = true;
         _camera = GameObject.Find("Main Camera");
@@ -110,9 +113,11 @@ public class Player_class : MonoBehaviour {
         if(_slider01.value <= maxHealth / 3) {
             animator.SetBool("low", true);
         }
+        
         if(_slider02.value <= 0) {
             animator.SetBool("almostdead", true);
         }
+        
         if (block) {
             _shieldTimer += shieldRemain;
             Shield.transform.localScale += new Vector3(0.1f, .1f, .1f) * (-7f * Time.deltaTime);
@@ -127,6 +132,7 @@ public class Player_class : MonoBehaviour {
                 playerSpeed = 0;
                 _slider01.value -= 15;
                 player_management.ActivateInput = false;
+                Instantiate(explosionSmoke, transform.position, transform.rotation);
                 Invoke(nameof(ShieldBroke),5);
             }
         }
@@ -140,6 +146,14 @@ public class Player_class : MonoBehaviour {
                 }
             }
         }
+
+        if (_shieldTimer < 50) smokeParticle.maxParticles = 0;
+        if (_shieldTimer >= 50 && _shieldTimer < 60) smokeParticle.maxParticles = 1;
+        if (_shieldTimer >= 60 && _shieldTimer < 70) smokeParticle.maxParticles = 5;
+        if (_shieldTimer >= 70 && _shieldTimer < 80) smokeParticle.maxParticles = 10;
+        if (_shieldTimer >= 80 && _shieldTimer < 90) smokeParticle.maxParticles = 15;
+        if (_shieldTimer >= 90 && _shieldTimer < 100) smokeParticle.maxParticles = 20;
+        
         if (!isNearGrounded && !isDead) {
             _rigidbody.drag = 3;
             playerSpeed = 100;

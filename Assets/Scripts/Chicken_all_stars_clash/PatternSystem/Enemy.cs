@@ -58,6 +58,7 @@ namespace PatternSystem {
         private float _patternTimer;
         private float fixedDeltaTime;
         public float ShakeTimer = 1;
+        private float _distancePlayerBoss;
         private bool _isDead;
         public bool _enemyReady;
         private Quaternion _rotGoal;
@@ -180,7 +181,11 @@ namespace PatternSystem {
         }
 
         private void OnTriggerEnter(Collider other) {
-            if (other.gameObject.CompareTag("Attack") || other.gameObject.CompareTag("DeathBalloon") || other.gameObject.CompareTag("Shield")) {
+            if (other.gameObject.CompareTag("Attack") || other.gameObject.CompareTag("DeathBalloon") || other.gameObject.CompareTag("Shield"))
+            {
+                _distancePlayerBoss = (other.GetComponentInParent<Player_class>().transform.position.x - 
+                                       transform.position.x) / 2;
+                Debug.Log(_distancePlayerBoss);
                 ShakeTimer = 0;
                 float damage = other.GetComponentInParent<Player_class>()._currentWeapon.DamageData;
                 float score = other.GetComponentInParent<Player_class>()._currentWeapon.ScoreData;

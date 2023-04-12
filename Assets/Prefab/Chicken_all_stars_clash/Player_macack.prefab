@@ -1634,6 +1634,7 @@ MonoBehaviour:
   Shield: {fileID: 4713248160424672953}
   projectile: {fileID: 0}
   deathBalloon: {fileID: 3750967302860024381}
+  explosionSmoke: {fileID: 1180971849867680653, guid: 9b264932cdcdd454e9e44693babe8a14, type: 3}
   weapon:
   - {fileID: 11400000, guid: ffd1b754e0d40fd4b8fda55e9777a8b0, type: 2}
   - {fileID: 11400000, guid: a188c22641412bd4aa6869a0e24a5207, type: 2}
@@ -3194,7 +3195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &612966472938082547
 Transform:
   m_ObjectHideFlags: 0
@@ -3218,7 +3219,7 @@ ParticleSystem:
   m_GameObject: {fileID: 3049955261790791326}
   serializedVersion: 7
   lengthInSec: 0.05
-  simulationSpeed: 1
+  simulationSpeed: 3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -3228,7 +3229,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -3345,7 +3346,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3461,7 +3462,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3777,7 +3778,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 5
+    maxNumParticles: 0
     size3D: 0
     rotation3D: 0
     gravityModifier:
