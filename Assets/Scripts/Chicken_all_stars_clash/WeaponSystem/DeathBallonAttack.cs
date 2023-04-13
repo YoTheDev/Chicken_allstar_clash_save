@@ -19,6 +19,7 @@ public class DeathBallonAttack : WeaponData
     public override void DoSimple(Player_class player) { throw new System.NotImplementedException(); }
 
     public override void DoAirSimple(Player_class player) {
+        player.balloonCharge.SetActive(true);
         player._rigidbody.velocity = new Vector3(player._rigidbody.velocity.x, 0);
         player._rigidbody.AddForce(Vector3.down * 1.5f,ForceMode.Impulse);
         damageGiven = deathBalloonAttackDamage;

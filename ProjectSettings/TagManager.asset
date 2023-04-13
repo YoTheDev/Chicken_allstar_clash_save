@@ -18,6 +18,7 @@ TagManager:
   - KickZone
   - Shield
   - AttackBoss
+  - Weapon_end
   layers:
   - Default
   - TransparentFX

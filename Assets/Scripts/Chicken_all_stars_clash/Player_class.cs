@@ -71,6 +71,7 @@ public class Player_class : MonoBehaviour {
     public GameObject projectile;
     public GameObject deathBalloon;
     public GameObject explosionSmoke;
+    public GameObject balloonCharge;
     public List<WeaponData> weapon;
     public Game_management Game_management;
     public TextMeshPro PlayerIndicator;
@@ -283,7 +284,10 @@ public class Player_class : MonoBehaviour {
             _TouchBossAttack = false;
             CollisionBoss();
         }
-        if (isDead) _currentWeapon.Interrupt(this);
+        if (isDead) {
+            _currentWeapon.Interrupt(this);
+            balloonCharge.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
