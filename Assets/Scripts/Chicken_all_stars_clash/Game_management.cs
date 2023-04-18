@@ -27,6 +27,8 @@ public class Game_management : ScriptableObject {
         playerClassChoosen[_aliveIndex] = playerClass[_classIndex];
         ListOfColorChoosen[_aliveIndex].MaterialOne = ListOfColorMaterial[colorIndex].MaterialOne;
         ListOfColorChoosen[_aliveIndex].MaterialTwo = ListOfColorMaterial[colorIndex].MaterialTwo;
+        ListOfColorChoosen[_aliveIndex].DoubleSidedMaterial = ListOfColorMaterial[colorIndex].DoubleSidedMaterial;
+        ListOfColorChoosen[_aliveIndex].PirateShaderMaterial = ListOfColorMaterial[colorIndex].PirateShaderMaterial;
         countPlayer++;
     }
     
@@ -34,6 +36,8 @@ public class Game_management : ScriptableObject {
         playerClassChoosen[_aliveIndex] = null;
         ListOfColorChoosen[_aliveIndex].MaterialOne = null;
         ListOfColorChoosen[_aliveIndex].MaterialTwo = null;
+        ListOfColorChoosen[_aliveIndex].DoubleSidedMaterial = null;
+        ListOfColorChoosen[_aliveIndex].PirateShaderMaterial = null;
         countPlayer--;
     }
     
@@ -63,10 +67,11 @@ public class Game_management : ScriptableObject {
             Controll[i] = null;
         }
         countPlayer = 0;
-        for (int i = 0; i < ListOfColorChoosen.Count; i++)
-        {
+        for (int i = 0; i < ListOfColorChoosen.Count; i++) {
             ListOfColorChoosen[i].MaterialOne = null;
             ListOfColorChoosen[i].MaterialTwo = null;
+            ListOfColorChoosen[i].DoubleSidedMaterial = null;
+            ListOfColorChoosen[i].PirateShaderMaterial = null;
         }
     }
 
@@ -81,10 +86,14 @@ public class Game_management : ScriptableObject {
 public class ColorList {
     public Material MaterialOne;
     public Material MaterialTwo;
+    public Material DoubleSidedMaterial;
+    public Material PirateShaderMaterial;
 }
 
 [Serializable]
 public class ChoosenColorList {
     public Material MaterialOne;
     public Material MaterialTwo;
+    public Material DoubleSidedMaterial;
+    public Material PirateShaderMaterial;
 }

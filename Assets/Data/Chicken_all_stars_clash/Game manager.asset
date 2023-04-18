@@ -20,36 +20,52 @@ MonoBehaviour:
   ListOfColorMaterial:
   - MaterialOne: {fileID: 2100000, guid: 1f189e6b5da317d49808218174d5df3f, type: 2}
     MaterialTwo: {fileID: 2100000, guid: aec2e0ac18038c9409a92a5a47df4f86, type: 2}
+    DoubleSidedMaterial: {fileID: 2100000, guid: ffb87d6d2be400247957ac684af4a82b, type: 2}
+    PirateShaderMaterial: {fileID: -4681681898712935682, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
   - MaterialOne: {fileID: 2100000, guid: 8d1510d1dcc174940b3e6ee901098344, type: 2}
     MaterialTwo: {fileID: 2100000, guid: 62005cd2c9253174a8280f9719342585, type: 2}
+    DoubleSidedMaterial: {fileID: 2100000, guid: ffb87d6d2be400247957ac684af4a82b, type: 2}
+    PirateShaderMaterial: {fileID: -4681681898712935682, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
   - MaterialOne: {fileID: 2100000, guid: a174b12a9e9ce8840a2e974ea04ee3bf, type: 2}
     MaterialTwo: {fileID: 2100000, guid: 632edad64ba7e8f4cbcedf91ba68c163, type: 2}
+    DoubleSidedMaterial: {fileID: 2100000, guid: ffb87d6d2be400247957ac684af4a82b, type: 2}
+    PirateShaderMaterial: {fileID: -4681681898712935682, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
   - MaterialOne: {fileID: 2100000, guid: d0812bdb64956904cb38430bacf1a378, type: 2}
     MaterialTwo: {fileID: 2100000, guid: 3c95921df8b40344c8f423faf363f316, type: 2}
+    DoubleSidedMaterial: {fileID: 2100000, guid: ffb87d6d2be400247957ac684af4a82b, type: 2}
+    PirateShaderMaterial: {fileID: -4681681898712935682, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
   ListOfColorChoosen:
+  - MaterialOne: {fileID: 2100000, guid: 1f189e6b5da317d49808218174d5df3f, type: 2}
+    MaterialTwo: {fileID: 2100000, guid: aec2e0ac18038c9409a92a5a47df4f86, type: 2}
+    DoubleSidedMaterial: {fileID: 2100000, guid: ffb87d6d2be400247957ac684af4a82b, type: 2}
+    PirateShaderMaterial: {fileID: -4681681898712935682, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
   - MaterialOne: {fileID: 0}
     MaterialTwo: {fileID: 0}
+    DoubleSidedMaterial: {fileID: 0}
+    PirateShaderMaterial: {fileID: 0}
   - MaterialOne: {fileID: 0}
     MaterialTwo: {fileID: 0}
+    DoubleSidedMaterial: {fileID: 0}
+    PirateShaderMaterial: {fileID: 0}
   - MaterialOne: {fileID: 0}
     MaterialTwo: {fileID: 0}
-  - MaterialOne: {fileID: 0}
-    MaterialTwo: {fileID: 0}
-  playerAlive: 00000000
+    DoubleSidedMaterial: {fileID: 0}
+    PirateShaderMaterial: {fileID: 0}
+  playerAlive: 01000000
   playerClassChoosen:
+  - {fileID: 1354727619519666524, guid: 3b4b529930edc6c4c8cae5efcf4e4044, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  ControllerOrder: 00000000000000000000000000000000
+  ControllerOrder: 58000000000000000000000000000000
   _aliveIndex: 0
   _classIndex: 0
   colorIndex: 0
   Controll:
-  - 
+  - Xbox Controller
   - 
   - 
   - 
   victory: 0
   gameOver: 0
-  countPlayer: 0
+  countPlayer: 1
