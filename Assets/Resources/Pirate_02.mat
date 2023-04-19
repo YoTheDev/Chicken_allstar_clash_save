@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: b46e9bd496aeba34b90877f03eecf68d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8cab49f252ff77d4ba0cce4256aa22df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CutoutMap:
@@ -144,7 +144,7 @@ Material:
     - _InvertTransparent: 0
     - _Metallic: 0
     - _Mode: 1
-    - _OcclusionStrength: 1
+    - _OcclusionStrength: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
