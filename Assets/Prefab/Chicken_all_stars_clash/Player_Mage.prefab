@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPivot: {fileID: 2918346699212776198}
+  animator: {fileID: 0}
   jumpHeight: 60
   doubleJumpHeight: 80
   airattackjumpHeight: 30
@@ -59,6 +60,7 @@ MonoBehaviour:
   maxHealth: 110
   repeatAttackTime: 1
   repeatAttackNumber: 1
+  camera_script: {fileID: 0}
   player_management: {fileID: 0}
   _currentWeapon: {fileID: 0}
   _canAirAttack: 0
@@ -75,15 +77,20 @@ MonoBehaviour:
   _isGrounded: 0
   _attack: 0
   _airAttack: 0
+  block: 0
   _rigidbody: {fileID: 0}
   attackBoxCollider: {fileID: 0}
   playerSpeed: 120
   propulsion: 5
+  shieldRemain: 0
+  shieldRecharge: 0
   attackBox: {fileID: 2918346698499495316}
   attack2Box: {fileID: 2918346698394305997}
   Shield: {fileID: 5054358799249861207}
   projectile: {fileID: 1316202251585092161, guid: 979f2c74b6b7fd142a1e6bf0540d89c6, type: 3}
   deathBalloon: {fileID: 8216640073782268733}
+  explosionSmoke: {fileID: 0}
+  balloonCharge: {fileID: 0}
   weapon:
   - {fileID: 11400000, guid: ffd1b754e0d40fd4b8fda55e9777a8b0, type: 2}
   - {fileID: 11400000, guid: cf3604e1f629a804eb496b69b2146606, type: 2}
