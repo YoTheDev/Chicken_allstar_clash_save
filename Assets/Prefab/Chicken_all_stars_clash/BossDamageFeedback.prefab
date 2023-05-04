@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7789451385364124981}
   - component: {fileID: 8731388625460679228}
   - component: {fileID: 704373915627894888}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ ParticleSystem:
   m_GameObject: {fileID: 979226930525679615}
   serializedVersion: 7
   lengthInSec: 0.2
-  simulationSpeed: 0.15
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -316,7 +316,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 30
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4790,7 +4790,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 341fc0eaf8f73f3449ed42448de84a58, type: 2}
+  - {fileID: 2100000, guid: 1dae3f8a7bdc2314d89cae9b117a97c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
