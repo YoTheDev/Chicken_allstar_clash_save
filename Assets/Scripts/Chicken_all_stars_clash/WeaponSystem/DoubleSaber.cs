@@ -23,6 +23,7 @@ public class DoubleSaber : WeaponData {
     public override float currentAirProjectile { get; set; }
 
     public override void DoSimple(Player_class player) {
+        player.Ground_slash.SetActive(true);
         player.reloadTimer = reloadTime;
         scoreGiven = simpleScore;
         saveDamage = simpleDamage;
@@ -35,6 +36,7 @@ public class DoubleSaber : WeaponData {
     }
 
     public override void DoAirSimple(Player_class player) {
+        player.Air_slash.SetActive(true);
         player.reloadTimer = airReloadTime;
         saveDamage = airSimpleDamage;
         player.attack2Box.SetActive(true);

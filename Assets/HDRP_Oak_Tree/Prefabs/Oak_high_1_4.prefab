@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9130181780851835513}
   - component: {fileID: 5267857386343091676}
   - component: {fileID: 7998330438289799446}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Oak_high_1_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

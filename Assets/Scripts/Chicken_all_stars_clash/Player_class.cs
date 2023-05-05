@@ -72,6 +72,8 @@ public class Player_class : MonoBehaviour {
     public GameObject deathBalloon;
     public GameObject explosionSmoke;
     public GameObject balloonCharge;
+    public GameObject Ground_slash;
+    public GameObject Air_slash;
     public List<WeaponData> weapon;
     public Game_management Game_management;
     public TextMeshPro PlayerIndicator;
@@ -387,10 +389,12 @@ public class Player_class : MonoBehaviour {
         if(_attack) {
             _attack = false;
             attackBox.SetActive(false);
+            Ground_slash.SetActive(false);
         }
         if(_airAttack) {
             _airAttack = false;
             attack2Box.SetActive(false);
+            Air_slash.SetActive(false);
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6369829672318123604}
   - component: {fileID: 4652047223869341405}
   - component: {fileID: 1796789153385530976}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4758,7 +4758,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 341fc0eaf8f73f3449ed42448de84a58, type: 2}
+  - {fileID: 2100000, guid: 1dae3f8a7bdc2314d89cae9b117a97c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4815,7 +4815,7 @@ GameObject:
   - component: {fileID: 1363585830681168748}
   - component: {fileID: 7403186973007604872}
   - component: {fileID: 4280943339957117014}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5143,7 +5143,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 9
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5407,7 +5407,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 20
-    size3D: 0
+    size3D: 1
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -14484,8 +14484,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 341fc0eaf8f73f3449ed42448de84a58, type: 2}
-  - {fileID: 2100000, guid: 341fc0eaf8f73f3449ed42448de84a58, type: 2}
+  - {fileID: 2100000, guid: 99ba990e46a900642b111dee6132c9e9, type: 2}
+  - {fileID: 2100000, guid: 99ba990e46a900642b111dee6132c9e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
