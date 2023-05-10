@@ -187,6 +187,7 @@ public class Player_class : MonoBehaviour {
         gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
         Game_management._aliveIndex = currentPlayerInputIndex;
         Invoke(nameof(PlayerBigger),2);
+        OnUnBlock();
     }
 
     void WalkOver() { animator.SetFloat("speed",0); }
@@ -256,7 +257,7 @@ public class Player_class : MonoBehaviour {
         block = true;
         _currentWeapon.DoBlock(this);
         _currentWeapon.Interrupt(this);
-        playerSpeed /= 2;
+        playerSpeed = _saveSpeed / 2;
     }
 
     void OnUnBlock() {
@@ -278,7 +279,7 @@ public class Player_class : MonoBehaviour {
             animator.SetBool("damage",false);
             if(!isDead) {
                 _rigidbody.drag = 10;
-                playerSpeed = _saveSpeed;
+                if (!block) playerSpeed = _saveSpeed;
                 AttackCooldown();
             }
         }
@@ -384,7 +385,7 @@ public class Player_class : MonoBehaviour {
         if (!isDead) {
             if (_saveAxisXpositive) playerPivot.transform.rotation = Quaternion.Euler(rotation.x,0,rotation.z);
             else playerPivot.transform.rotation = Quaternion.Euler(rotation.x,180,rotation.z);
-            playerSpeed = _saveSpeed;
+            if (!block) playerSpeed = _saveSpeed;
         }
         if(_attack) {
             _attack = false;
