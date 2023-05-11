@@ -51,7 +51,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Chicken_all_stars_clash_proto_04\Chickens_all_stars_clash.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../CASC_Prototype_v4.2\Chickens_all_stars_clash.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\y.spriet\Desktop\Chicken_all_stars_clash_proto_03" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -125,6 +125,8 @@
       <workItem from="1683294386521" duration="797000" />
       <workItem from="1683714183549" duration="521000" />
       <workItem from="1683717321100" duration="2080000" />
+      <workItem from="1683791139296" duration="10507000" />
+      <workItem from="1683816030462" duration="1336000" />
     </task>
     <servers />
   </component>

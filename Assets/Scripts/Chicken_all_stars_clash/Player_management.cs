@@ -53,18 +53,20 @@ public class Player_management : MonoBehaviour {
         for (int i = 0; i < GameManagement.playerClassChoosen.Count; i++) {
             GameObject thisPlayer = GameManagement.playerClassChoosen[i];
             string controller = GameManagement.Controll[i];
+            int controllerOrder = GameManagement.ControllerOrder[i];
+            InputDevice inputDeviceId = InputSystem.GetDeviceById(controllerOrder);
             if(thisPlayer == null) continue;
             playerClass[i] = thisPlayer.GetComponent<Player_class>();
             thisPlayer.name = "Player_" + i;
             inputManager.playerPrefab = thisPlayer;
-            inputManager.JoinPlayer(i,i,controller);
+            inputManager.JoinPlayer(i,i,controller,inputDeviceId);
             thisPlayer = GameObject.Find("Player_" + i + "(Clone)");
             thisPlayer.transform.position = playerSpawnerArena[i].transform.position;
             life[i].SetActive(true);
             Material[] RoosterBase =
             {
                 GameManagement.ListOfColorChoosen[i].MaterialTwo, GameManagement.ListOfColorChoosen[i].MaterialOne,
-                GameManagement.ListOfColorChoosen[i].DoubleSidedMaterial, GameManagement.ListOfColorMaterial[i].PirateShaderMaterial
+                GameManagement.ListOfColorChoosen[i].AnimaPlaceHolder, GameManagement.ListOfColorChoosen[i].PirateShaderMaterial
             };
             thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().materials = RoosterBase;
         }

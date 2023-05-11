@@ -181,13 +181,13 @@ public class Player_class : MonoBehaviour {
         if (isDead) return;
         if (!(_slider02.value <= 0)) return;
         Shield.SetActive(false);
+        block = false;
         isDead = true;
         playerSpeed = 10;
         CancelInvoke(nameof(InvulnerabilityEnd));
         gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
         Game_management._aliveIndex = currentPlayerInputIndex;
         Invoke(nameof(PlayerBigger),2);
-        OnUnBlock();
     }
 
     void WalkOver() { animator.SetFloat("speed",0); }

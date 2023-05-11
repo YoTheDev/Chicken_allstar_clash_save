@@ -10683,7 +10683,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Prototype demo 04.1
+  m_Text: Prototype demo v4.2
 --- !u!222 &1747899972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13081,7 +13081,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1

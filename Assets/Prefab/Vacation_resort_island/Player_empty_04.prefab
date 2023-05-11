@@ -824,6 +824,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: d0812bdb64956904cb38430bacf1a378, type: 2}
+    - target: {fileID: -2562436172148172106, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5cbd1750fd4aaec4abbd3b04f57e324e, type: 2}
     - target: {fileID: 919132149155446097, guid: 4df9282d04cc551409c85ea9959dc167, type: 3}
       propertyPath: m_Name
       value: Pirate
