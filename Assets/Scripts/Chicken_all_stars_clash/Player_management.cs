@@ -40,6 +40,7 @@ public class Player_management : MonoBehaviour {
     private bool playOneShot;
 
     private void Start() {
+        Physics.gravity = new Vector3(0, -180f, 0);
         GameManagement.victory = false;
         GameManagement.gameOver = false;
         retryButton.onClick.AddListener(() => Retry());

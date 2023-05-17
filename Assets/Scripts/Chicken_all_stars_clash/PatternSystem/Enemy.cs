@@ -74,7 +74,6 @@ namespace PatternSystem {
             Health_text_02.text = maxHealth.ToString();
             HideBarImage.SetActive(false);
             Rigidbody = GetComponent<Rigidbody>();
-            Physics.gravity = new Vector3(0, -180f, 0);
             fixedDeltaTime = Time.fixedDeltaTime;
             healthBarStartPos = HealthBar.transform.position;
             startPos = graphicsPivot.transform.position;
