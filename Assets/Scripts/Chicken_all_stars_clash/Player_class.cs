@@ -14,6 +14,7 @@ using Random = UnityEngine.Random;
 public class Player_class : MonoBehaviour {
     
     [SerializeField] private GameObject playerPivot;
+    [SerializeField] private GameObject playerDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private float jumpHeight = 1.0f;
     [SerializeField] private float doubleJumpHeight;
@@ -305,6 +306,7 @@ public class Player_class : MonoBehaviour {
     void CollisionBoss() {
         gameObject.layer = LayerMask.NameToLayer("IgnoreCollision");
         deathBalloon.layer = LayerMask.NameToLayer("IgnoreCollision");
+        playerDamage.SetActive(true);
         Invoke(nameof(InvulnerabilityEnd), 1);
         if(isDead) return;
         animator.SetBool("damage",true);
