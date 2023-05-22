@@ -156,15 +156,15 @@ namespace PatternSystem {
                 camera_script.shakeStart = true;
                 camera_script.ShakeTime = 0;
                 if (Jump) {
-                    Instantiate(Shock_wave_prefab, new Vector3(transform.position.x,transform.position.y - 2,transform.position.z), transform.rotation);
+                    Instantiate(Shock_wave_prefab, new Vector3(transform.position.x,transform.position.y - 2,transform.position.z), graphicsPivot.transform.rotation);
                     Shock_wave_01 = GameObject.Find("Shock_wave_01");
                         Shock_wave_02 = GameObject.Find("Shock_wave_02");
                     Shock_wave_01.SetActive(true);
                         Shock_wave_02.SetActive(true);
                     Rigidbody rbShockWave_01 = Shock_wave_01.GetComponent<Rigidbody>();
                         Rigidbody rbShockWave_02 = Shock_wave_02.GetComponent<Rigidbody>();
-                    rbShockWave_01.AddForce(Vector3.left * 20, ForceMode.Impulse);
-                        rbShockWave_02.AddForce(Vector3.right * 20, ForceMode.Impulse);
+                    rbShockWave_01.AddForce(-transform.forward * 20, ForceMode.Impulse);
+                        rbShockWave_02.AddForce(transform.forward * 20, ForceMode.Impulse);
                     Shock_wave_01.name = "Shock_wave_03";
                         Shock_wave_02.name = "Shock_wave_04";
                     Shock_wave_01.transform.parent = null;

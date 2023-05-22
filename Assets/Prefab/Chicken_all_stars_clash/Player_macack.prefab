@@ -1582,6 +1582,7 @@ Transform:
   - {fileID: 612966472938082547}
   - {fileID: 1079954547262425636}
   - {fileID: 4945462752685025819}
+  - {fileID: 8994753085044156354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1696,7 +1697,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &7817156703244316400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11335,7 +11336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3019669919853398446}
   - component: {fileID: 8973657978720242048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rooster_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11910,7 +11911,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -17676,6 +17677,88 @@ Transform:
   m_Father: {fileID: 1785465188196809716}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8456342933650100730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8994753085044156354}
+  - component: {fileID: 7973406955627094478}
+  m_Layer: 0
+  m_Name: Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8994753085044156354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456342933650100730}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.16, y: -1, z: 0.15}
+  m_LocalScale: {x: 0.57685447, y: 0.82787, z: 0.82787}
+  m_Children: []
+  m_Father: {fileID: 1354727619519666527}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &7973406955627094478
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456342933650100730}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d8cee733084431e42ba5a624d8507abd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 15.9, y: 14.17}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &8473100176839583902
 GameObject:
   m_ObjectHideFlags: 0
@@ -23165,6 +23248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken_weapon_pirate_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2246439365026600243, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -23176,6 +23263,10 @@ PrefabInstance:
     - target: {fileID: 2246439365026600243, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443040558011324372, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7450579689612008061, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -23259,6 +23350,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken_accessories_pirate_02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4137d618c5172824bb8b3182c6bf1c30, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994197130373683722, guid: 4137d618c5172824bb8b3182c6bf1c30, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4137d618c5172824bb8b3182c6bf1c30, type: 3}
 --- !u!4 &6781565312168876470 stripped
@@ -23332,6 +23431,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
       propertyPath: m_Name
       value: Chicken_weapon_pirate_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443040558011324372, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7450579689612008061, guid: f1c5e78e5ce73304793fc92ed9153524, type: 3}
       propertyPath: m_Materials.Array.data[0]

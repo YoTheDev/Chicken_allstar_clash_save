@@ -41,6 +41,7 @@ public class Player_class : MonoBehaviour {
     private Slider _slider02;
     private Vector3 knockbackDirection;
     private Vector3 ShieldScale;
+    private Color LerpedColor = Color.black;
     private ParticleSystem.MainModule smokeParticle;
 
     [HideInInspector] public WeaponData _currentWeapon;
@@ -116,6 +117,7 @@ public class Player_class : MonoBehaviour {
         else { Invoke(nameof(WalkOver),0.2f); }
         if(_slider01.value <= maxHealth / 3) {
             animator.SetBool("low", true);
+            LerpedColor = Color.Lerp(Color.black, Color.red, Mathf.PingPong(Time.time, 1));
         }
         
         if(_slider02.value <= 0) {

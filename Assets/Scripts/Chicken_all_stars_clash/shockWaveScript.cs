@@ -16,7 +16,7 @@ public class shockWaveScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         enemy.attackDamageCoast = damage;
-        if (other.gameObject.CompareTag("Wall")) {
+        if (other.gameObject.CompareTag("OOB")) {
             Destroy(gameObject);
         }
     }

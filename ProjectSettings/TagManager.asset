@@ -19,6 +19,7 @@ TagManager:
   - Shield
   - AttackBoss
   - Weapon_end
+  - OOB
   layers:
   - Default
   - TransparentFX
