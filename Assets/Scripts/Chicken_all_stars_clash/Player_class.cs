@@ -39,6 +39,7 @@ public class Player_class : MonoBehaviour {
     public Player_management player_management;
     private Slider _slider01;
     private Slider _slider02;
+    private Material[] _skinnedMaterial;
     private Vector3 knockbackDirection;
     private Vector3 ShieldScale;
     private Color LerpedColor = Color.black;
@@ -82,6 +83,10 @@ public class Player_class : MonoBehaviour {
     public List<string> playerLifeUIstring;
 
     void Start() {
+        _skinnedMaterial = GetComponentInChildren<SkinnedMeshRenderer>().materials;
+        for (int i = 0; i < _skinnedMaterial.Length; i++) {
+            _skinnedMaterial[i].EnableKeyword("_EMISSION");
+        }
         smokeParticle = GetComponentInChildren<ParticleSystem>().main;
         ShieldScale = Shield.transform.localScale;
         _saveAxisXpositive = true;
@@ -118,6 +123,9 @@ public class Player_class : MonoBehaviour {
         if(_slider01.value <= maxHealth / 3) {
             animator.SetBool("low", true);
             LerpedColor = Color.Lerp(Color.black, Color.red, Mathf.PingPong(Time.time, 1));
+            for (int i = 0; i < _skinnedMaterial.Length; i++) {
+                _skinnedMaterial[i].SetColor("_EmissionColor",LerpedColor);
+            }
         }
         
         if(_slider02.value <= 0) {
