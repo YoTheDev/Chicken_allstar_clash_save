@@ -163,8 +163,8 @@ namespace PatternSystem {
                         Shock_wave_02.SetActive(true);
                     Rigidbody rbShockWave_01 = Shock_wave_01.GetComponent<Rigidbody>();
                         Rigidbody rbShockWave_02 = Shock_wave_02.GetComponent<Rigidbody>();
-                    rbShockWave_01.AddForce(-transform.forward * 20, ForceMode.Impulse);
-                        rbShockWave_02.AddForce(transform.forward * 20, ForceMode.Impulse);
+                    rbShockWave_01.AddForce(-transform.forward * 40, ForceMode.Impulse);
+                        rbShockWave_02.AddForce(transform.forward * 40, ForceMode.Impulse);
                     Shock_wave_01.name = "Shock_wave_03";
                         Shock_wave_02.name = "Shock_wave_04";
                     Shock_wave_01.transform.parent = null;
