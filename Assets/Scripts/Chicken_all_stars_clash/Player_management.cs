@@ -40,6 +40,20 @@ public class Player_management : MonoBehaviour {
     private bool playOneShot;
 
     private void Start() {
+        switch (GameManagement.countPlayer) {
+            case 1:
+                enemy.maxHealth = 15000;
+                break;
+            case 2:
+                enemy.maxHealth = 17000;
+                break;
+            case 3:
+                enemy.maxHealth = 18500;
+                break;
+            case 4:
+                enemy.maxHealth = 20000;
+                break;
+        }
         Physics.gravity = new Vector3(0, -180f, 0);
         GameManagement.victory = false;
         GameManagement.gameOver = false;
@@ -64,41 +78,27 @@ public class Player_management : MonoBehaviour {
             thisPlayer = GameObject.Find("Player_" + i + "(Clone)");
             thisPlayer.transform.position = playerSpawnerArena[i].transform.position;
             life[i].SetActive(true);
-            Material[] RoosterBase =
-            {
+            Material[] RoosterBase = {
                 GameManagement.ListOfColorChoosen[i].MaterialTwo, GameManagement.ListOfColorChoosen[i].MaterialOne,
                 GameManagement.ListOfColorChoosen[i].AnimaPlaceHolder, GameManagement.ListOfColorChoosen[i].PirateShaderMaterial
             };
             thisPlayer.GetComponentInChildren<SkinnedMeshRenderer>().materials = RoosterBase;
         }
-        switch (GameManagement.countPlayer) {
-            case 1:
-                enemy.maxHealth = 15000;
-                break;
-            case 2:
-                enemy.maxHealth = 20000;
-                break;
-            case 3:
-                enemy.maxHealth = 23000;
-                break;
-            case 4:
-                enemy.maxHealth = 25000;
-                break;
-        }
     }
 
     void Update() {
         if (GameManagement.victory && !playOneShot) {
+            playOneShot = true;
             victoryUI.SetActive(true);
             switch (GameManagement.countPlayer) {
                 case 1:
-                    scoreEarned += 500;
+                    scoreEarned += 800;
                     break;
                 case 2:
-                    scoreEarned += 375;
+                    scoreEarned += 500;
                     break;
                 case 3:
-                    scoreEarned += 200;
+                    scoreEarned += 300;
                     break;
                 case 4:
                     scoreEarned += 100;
@@ -107,7 +107,6 @@ public class Player_management : MonoBehaviour {
             scoreEarned += timeBonus;
             Invoke(nameof(ShowScore),1);
             backButton.Select();
-            playOneShot = true;
         }
         if (startTimeRemain >= -1) {
             startTimeRemain -= Time.deltaTime;

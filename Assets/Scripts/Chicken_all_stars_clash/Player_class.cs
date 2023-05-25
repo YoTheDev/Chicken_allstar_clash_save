@@ -44,6 +44,8 @@ public class Player_class : MonoBehaviour {
     private Vector3 ShieldScale;
     private Color LerpedColor = Color.black;
     private ParticleSystem.MainModule smokeParticle;
+    private PlayerInput thisPlayerInput;
+    private Gamepad _currentController;
 
     [HideInInspector] public WeaponData _currentWeapon;
     [HideInInspector] public bool _canAirAttack;
@@ -83,6 +85,7 @@ public class Player_class : MonoBehaviour {
     public List<string> playerLifeUIstring;
 
     void Start() {
+        thisPlayerInput = GetComponent<PlayerInput>();
         _skinnedMaterial = GetComponentInChildren<SkinnedMeshRenderer>().materials;
         for (int i = 0; i < _skinnedMaterial.Length; i++) {
             _skinnedMaterial[i].EnableKeyword("_EMISSION");
@@ -331,9 +334,14 @@ public class Player_class : MonoBehaviour {
         }
         _rigidbody.AddForce(knockbackDirection * knockbackForce,ForceMode.Impulse);
         _rigidbody.AddForce(Vector3.up * knockbackForceUp,ForceMode.Impulse);
+        _currentController = thisPlayerInput.GetDevice<Gamepad>();
+        _currentController.SetMotorSpeeds(0,2);
+        Invoke(nameof(VibrationDamageEnd),0.1f);
         AttackCooldown();
         Damage();
     }
+
+    void VibrationDamageEnd() { _currentController.SetMotorSpeeds(0,0); }
 
     void Damage() {
         camera_script.shakeStart = true;

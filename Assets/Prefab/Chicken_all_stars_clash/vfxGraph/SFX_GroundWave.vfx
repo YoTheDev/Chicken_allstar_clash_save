@@ -1065,7 +1065,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.0,"y":0.019999999552965165,"z":0.004000000189989805}'
+      m_SerializableObject: '{"x":0.0,"y":0.05999999865889549,"z":0.004000000189989805}'
     m_Space: 2147483647
   m_Property:
     name: Pivot

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
@@ -67,16 +68,20 @@ namespace PatternSystem {
 
         private void Start() {
             animator = GetComponentInChildren<Animator>();
-            _currentHealth = maxHealth;
-            Slider.maxValue = maxHealth;
-            Slider.value = maxHealth;
-            Health_text.text = _currentHealth.ToString();
-            Health_text_02.text = maxHealth.ToString();
             HideBarImage.SetActive(false);
             Rigidbody = GetComponent<Rigidbody>();
             fixedDeltaTime = Time.fixedDeltaTime;
             healthBarStartPos = HealthBar.transform.position;
             startPos = graphicsPivot.transform.position;
+            Invoke(nameof(LifeSet),0.3f);
+        }
+
+        void LifeSet() {
+            Slider.maxValue = maxHealth;
+            Slider.value = maxHealth;
+            _currentHealth = maxHealth;
+            Health_text.text = _currentHealth.ToString();
+            Health_text_02.text = maxHealth.ToString();
         }
 
         public void EnemyStart() {
